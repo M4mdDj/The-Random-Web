@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flash Cards</title>
+  <link rel="stylesheet" href="start.css" />
+</head>
+
+<body>
+  <ul class="menu">
+    <li><a href="start.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <h2 class="title">Take Me <br> To A</h2>
+
+
+  <button class="start-button" id="startButton">Random Website</button>
+  <p><b>Go to a 1-100 websites</b> </p>
+  <script>
+    // Array of URLs
+    var urls = ["http://www.youtube.com", "http://www.google.com", "http://www.facebook.com", "http://www.instagram.com", "http://www.baidu.com", "http://www.wikipedia.org", "http://www.yahoo.com", "http://www.whatsapp.com", "http://www.tumblr.com", "http://www.pinterest.com", "http://www.efunda.com", "http://www.github.com", "http://www.amazon.com", "http://www.twitter.com"];
+
+    // Function to navigate to a random URL
+    function goToRandomUrl() {
+      var randomIndex = Math.floor(Math.random() * urls.length);
+      var randomUrl = urls[randomIndex];
+      window.location.href = randomUrl;
+    }
+
+    // Attach the function to the start button
+    document.getElementById("startButton").addEventListener('click', goToRandomUrl);
+  </script>
+</body>
+
+</html>
